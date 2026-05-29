@@ -1,0 +1,284 @@
+/* Design System: Label Padhega India */
+
+:root {
+  --bg-main: #0c0e14;
+  --bg-card: rgba(20, 24, 35, 0.65);
+  --bg-card-hover: rgba(30, 36, 50, 0.8);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(9, 167, 100, 0.25);
+  
+  /* Harmonious Color Palette */
+  --primary: #09a764; /* FSSAI Safe Green */
+  --primary-glow: rgba(9, 167, 100, 0.4);
+  --primary-grad: linear-gradient(135deg, #09a764 0%, #00d284 100%);
+  
+  --secondary: #3867d6; /* Trust Blue */
+  --secondary-grad: linear-gradient(135deg, #3867d6 0%, #4b7bec 100%);
+  
+  --warning: #fd9644; /* Caution Orange */
+  --warning-grad: linear-gradient(135deg, #fa8231 0%, #fd9644 100%);
+  
+  --danger: #eb3b5a; /* Warning Red */
+  --danger-grad: linear-gradient(135deg, #fc5c65 0%, #eb3b5a 100%);
+  
+  --text-main: #f5f6fa;
+  --text-muted: #a5b1c2;
+  --text-dark: #2f3640;
+  
+  /* Glassmorphism & Shadows */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+body {
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% 0%, #16242a 0%, #0c0e14 70%);
+  min-height: 100vh;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphic Utilities */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.glow-green:hover {
+  box-shadow: 0 0 20px rgba(9, 167, 100, 0.15);
+  border-color: var(--primary-glow);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 2.25rem;
+  background: var(--primary-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b1c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background: rgba(9, 167, 100, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(9, 167, 100, 0.3);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Forms & Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--primary-grad);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(9, 167, 100, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(9, 167, 100, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.input-text {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-text:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(9, 167, 100, 0.15);
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.25fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-fade {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(235, 59, 90, 0.4); }
+  70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(235, 59, 90, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(235, 59, 90, 0); }
+}
+
+.pulse-danger {
+  animation: pulse 2s infinite;
+}
+
+/* Utility Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-success { background: rgba(9, 167, 100, 0.12); color: #00d284; border: 1px solid rgba(9, 167, 100, 0.2); }
+.badge-warning { background: rgba(253, 150, 68, 0.12); color: #fd9644; border: 1px solid rgba(253, 150, 68, 0.2); }
+.badge-danger { background: rgba(235, 59, 90, 0.12); color: #fc5c65; border: 1px solid rgba(235, 59, 90, 0.2); }
+.badge-neutral { background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid rgba(255, 255, 255, 0.08); }
+
+/* SVG Progress Ring */
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Spinner */
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
